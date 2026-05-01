@@ -162,7 +162,7 @@ connection.execute(
 
 // 13- Get all sales along with product name and sale date. (0.5 Grade)
 connection.execute(
-  "SELECT PRODUCTS.ProductID, ProductName, QuantitySold, SaleDate FROM PRODUCTS JOIN SALES ON SALES.ProductID - PRODUCTS.ProductID",
+  "SELECT PRODUCTS.ProductID, ProductName, QuantitySold, SaleDate FROM PRODUCTS JOIN SALES ON SALES.ProductID = PRODUCTS.ProductID",
   [],
   (error, result) =>
     executionCallback(error, result, "13- Get all sales along with product name and sale date"),
